@@ -74,8 +74,8 @@ impl WindowId {
 
 #[derive(Clone, Debug, PartialEq)]
 pub enum WindowDesktop {
-    Id(u32), // 0 and higher
-    StickyWindow,  // -1
+    Id(u32),      // 0 and higher
+    StickyWindow, // -1
 }
 
 #[derive(Clone, Debug, PartialEq)]
