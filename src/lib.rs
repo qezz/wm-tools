@@ -57,6 +57,12 @@ pub fn xprop() -> String {
 #[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
 pub struct WindowId(pub u64);
 
+impl std::fmt::Display for WindowId {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "0x{:x}", self.0)
+    }
+}
+
 impl WindowId {
     fn from_hex(s: &str) -> Result<Self, Error> {
         let no_0x = s.trim_start_matches("0x");
